@@ -5,14 +5,6 @@ Eggdrop 1.10.2. The bot runs as an Eggdrop script and requires Covid.5.0.tcl to
 be loaded first (it reads the shared `$owner` variable and requires the Covid
 module to be present).
 
-## Location
-
-All IdleRPG Tcl scripts live in:
-
-```
-/home/eggz/IdleTCL/IdleTCL/scripts/idlerpg/
-```
-
 ## Prerequisites
 
 - Eggdrop 1.10.2 (built and working)
@@ -73,7 +65,7 @@ array set cfg {
 ### 3. Start the bot
 
 ```bash
-cd /home/eggz/IdleTCL/IdleTCL
+cd /home/user/IdleTCL
 ./eggdrop -m  # -m for foreground mode (use -nm for no-motd)
 ```
 
@@ -204,12 +196,12 @@ written by the Tcl bot.
 
 2. **Configure the database path** in `IdleRPG/site/conf-global.php`:
    ```php
-   define('IDLE_SQLITE_PATH', '/home/eggz/IdleTCL/IdleTCL/irpg.sqlite');
+   define('IDLE_SQLITE_PATH', '/home/user/IdleTCL/IdleTCL/irpg.sqlite');
    ```
 
 3. **Ensure the web server can read** `irpg.sqlite`:
    ```bash
-   chmod 644 /home/eggz/IdleTCL/IdleTCL/irpg.sqlite
+   chmod 644 /home/user/IdleTCL/IdleTCL/irpg.sqlite
    ```
 
 4. **Point your web server** at `IdleRPG/site/` as the document root.
@@ -246,16 +238,6 @@ IdleTCL/                    # Eggdrop 1.10.2 installation
 ├── questinfo.txt           # Quest data (for PHP website)
 └── ...                     # Other Eggdrop files
 
-IdleRPG/                    # Original Perl bot + PHP website
-├── bot.v3.1.2.pl           # Original Perl bot (reference)
-├── .irpg.conf.example      # Original config example
-├── irpgdbtool              # Database migration tool
-├── events.txt              # Quest/event text
-├── site/                   # PHP website
-│   ├── conf-global.php     # Site configuration (SQLite path)
-│   ├── includes/db.class.php  # SQLite wrapper (new)
-│   ├── admin/sources/          # Page loaders (updated for SQLite)
-│   └── public/templates/       # Smarty templates
 ```
 
 ## License
