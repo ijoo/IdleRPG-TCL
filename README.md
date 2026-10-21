@@ -1,9 +1,8 @@
-# IdleRPG for Eggdrop (Tcl Port)
+# IdleRPG for Eggdrop (with Tcl)
 
 A complete port of the IRPG bot v3.1.2 (by jotun) from Perl to Tcl for use with
 Eggdrop 1.10.2. The bot runs as an Eggdrop script and requires Covid.5.0.tcl to
-be loaded first (it reads the shared `$owner` variable and requires the Covid
-module to be present).
+be loaded first.
 
 ## Prerequisites
 
